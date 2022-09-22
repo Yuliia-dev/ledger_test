@@ -2,7 +2,7 @@ export function Header() {
   return (
     <header>
       <nav>
-        <a href="">
+        <a href="./">
           <svg
             width="40"
             height="32"
@@ -20,19 +20,19 @@ export function Header() {
         </a>
         <ul>
           <li>
-            <a href="">Home</a>
+            <a href="./">Home</a>
           </li>
           <li>
-            <a href="">About</a>
+            <a href="./">About</a>
           </li>
           <li>
-            <a href="">Cases</a>
+            <a href="./">Cases</a>
           </li>
           <li>
-            <a href="">Blog</a>
+            <a href="./">Blog</a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <a href="./">Contact</a>
           </li>
         </ul>
       </nav>
