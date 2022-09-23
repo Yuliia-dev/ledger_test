@@ -1,9 +1,10 @@
+import { HeroSection, HeroTitle, HeroText, HeroBtn } from './Hero.styled';
 export function Hero() {
   return (
-    <section id="hero">
-      <h1>The Sky Is The Limit</h1>
-      <p>We provide world class financial assistance</p>
-      <button type="button">
+    <HeroSection id="hero">
+      <HeroTitle>The Sky Is The Limit</HeroTitle>
+      <HeroText>We provide world class financial assistance</HeroText>
+      <HeroBtn type="button">
         <svg
           width="9"
           height="13"
@@ -16,8 +17,8 @@ export function Hero() {
             fill="white"
           />
         </svg>
-        Read More
-      </button>
-    </section>
+        &nbsp; Read More
+      </HeroBtn>
+    </HeroSection>
   );
 }

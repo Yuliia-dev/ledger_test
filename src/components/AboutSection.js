@@ -1,6 +1,20 @@
 export function AboutSection() {
   return (
     <section id="about">
+      <picture>
+        <source
+          srcSet={`
+    ${require('./images/home/people.webp')} 1x, 
+    ${require('./images/home/people@2x.webp')} 2x`}
+          type="image/webp"
+        />
+        <source
+          srcSet={`
+    ${require('./images/home/people.jpg')} 1x, 
+    ${require('./images/home/people@2x.jpg')} 2x`}
+        />
+        <img src={require('./images/home/people.jpg')} alt="People" />
+      </picture>
       <p>What you are looking for</p>
       <h2>We provide bespoke solutions</h2>
       <p>

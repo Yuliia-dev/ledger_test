@@ -1,10 +1,11 @@
 import { Link } from 'react-scroll';
+import { LogoLink, LogoText, NavList, NavItem } from './Header.styled';
 
 export function Header() {
   return (
     <header>
       <nav>
-        <a href="./">
+        <LogoLink href="./">
           <svg
             width="40"
             height="32"
@@ -18,15 +19,15 @@ export function Header() {
               fill="#28A745"
             />
           </svg>
-          <span>Finance</span>Ledger
-        </a>
-        <ul>
-          <li>
+          <LogoText>Finance</LogoText>Ledger
+        </LogoLink>
+        <NavList>
+          <NavItem>
             <Link to="hero" spy={true} smooth={true} offset={50} duration={500}>
               Home
             </Link>
-          </li>
-          <li>
+          </NavItem>
+          <NavItem>
             <Link
               to="about"
               spy={true}
@@ -36,8 +37,8 @@ export function Header() {
             >
               About
             </Link>
-          </li>
-          <li>
+          </NavItem>
+          <NavItem>
             <Link
               to="cases"
               spy={true}
@@ -47,13 +48,13 @@ export function Header() {
             >
               Cases
             </Link>
-          </li>
-          <li>
+          </NavItem>
+          <NavItem>
             <Link to="blog" spy={true} smooth={true} offset={50} duration={500}>
               Blog
             </Link>
-          </li>
-          <li>
+          </NavItem>
+          <NavItem>
             <Link
               to="contact"
               spy={true}
@@ -63,8 +64,8 @@ export function Header() {
             >
               Contact
             </Link>
-          </li>
-        </ul>
+          </NavItem>
+        </NavList>
       </nav>
     </header>
   );
