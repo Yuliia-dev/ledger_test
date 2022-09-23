@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 export function Header() {
   return (
     <header>
@@ -20,19 +22,47 @@ export function Header() {
         </a>
         <ul>
           <li>
-            <a href="./">Home</a>
+            <Link to="hero" spy={true} smooth={true} offset={50} duration={500}>
+              Home
+            </Link>
           </li>
           <li>
-            <a href="./">About</a>
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              About
+            </Link>
           </li>
           <li>
-            <a href="./">Cases</a>
+            <Link
+              to="cases"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              Cases
+            </Link>
           </li>
           <li>
-            <a href="./">Blog</a>
+            <Link to="blog" spy={true} smooth={true} offset={50} duration={500}>
+              Blog
+            </Link>
           </li>
           <li>
-            <a href="./">Contact</a>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
