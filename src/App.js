@@ -8,7 +8,7 @@ import {
   Contact,
   Footer,
 } from './components';
-import { Container, Wrapper } from './App.styled';
+import { Wrapper } from './App.styled';
 
 function App() {
   return (
@@ -17,14 +17,14 @@ function App() {
         <Header />
         <Hero />
       </Wrapper>
-      <Container>
-        <AboutSection />
-        <Cases />
-        <BlogSection />
-        <Team />
-        <Contact />
-        <Footer />
-      </Container>
+      {/* <Container> */}
+      <AboutSection />
+      <Cases />
+      <BlogSection />
+      <Team />
+      <Contact />
+      <Footer />
+      {/* </Container> */}
     </>
   );
 }

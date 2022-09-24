@@ -1,13 +1,20 @@
+import {
+  Container,
+  TeamText,
+  TeamTitle,
+  TeamList,
+  TeamName,
+} from './Team.styled';
 export function Team() {
   return (
-    <section>
-      <p>Who we are</p>
-      <h2>Who we are</h2>
-      <p>
+    <Container>
+      <TeamText>Who we are</TeamText>
+      <TeamTitle>Our Professional Team</TeamTitle>
+      <TeamText>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
         sapiente!
-      </p>
-      <ul>
+      </TeamText>
+      <TeamList>
         <li>
           <picture>
             <source
@@ -23,8 +30,8 @@ export function Team() {
             />
             <img src={require('./images/team/person1.jpg')} alt="Men" />
           </picture>
-          <h3>John Doe</h3>
-          <p lang="en">President</p>
+          <TeamName>John Doe</TeamName>
+          <TeamText lang="en">President</TeamText>
         </li>
         <li>
           <picture>
@@ -42,8 +49,8 @@ export function Team() {
             />
             <img src={require('./images/team/person2.jpg')} alt="Women" />
           </picture>
-          <h3>Jane Doe</h3>
-          <p lang="en">Vice President</p>
+          <TeamName>Jane Doe</TeamName>
+          <TeamText lang="en">Vice President</TeamText>
         </li>
         <li>
           <picture>
@@ -61,10 +68,10 @@ export function Team() {
             />
             <img src={require('./images/team/person3.jpg')} alt="Men" />
           </picture>
-          <h3>Steve Smith</h3>
-          <p lang="en">Marketing Head</p>
+          <TeamName>Steve Smith</TeamName>
+          <TeamText lang="en">Marketing Head</TeamText>
         </li>
-      </ul>
-    </section>
+      </TeamList>
+    </Container>
   );
 }

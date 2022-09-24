@@ -1,3 +1,9 @@
+import {
+  Container,
+  ContactTitle,
+  ContactInput,
+  ContactBtn,
+} from './Contact.styled';
 export function Contact() {
   return (
     <section id="contact">
@@ -17,29 +23,30 @@ export function Contact() {
         <img src={require('./images/home/contact.jpg')} alt="Men" />
       </picture>
 
-      <label>
-        Enter your name
-        <input
-          placeholder="Enter your name"
-          type="text"
-          name="user-name"
-          minLength="2"
-          pattern="[a-zA-Zа-яёА-ЯЁ]+"
-          title="Use just letter"
-          required
-        />
-      </label>
-      <label>
-        Enter email*
-        <input
-          placeholder="Enter email*"
-          type="email"
-          name="user-email"
-          required
-        />
-      </label>
+      <Container>
+        <ContactTitle>Request Callback</ContactTitle>
+        <label>
+          <ContactInput
+            placeholder="Enter your name"
+            type="text"
+            name="user-name"
+            minLength="2"
+            pattern="[a-zA-Zа-яёА-ЯЁ]+"
+            title="Use just letter"
+            required
+          />
+        </label>
+        <label>
+          <ContactInput
+            placeholder="Enter email*"
+            type="email"
+            name="user-email"
+            required
+          />
+        </label>
 
-      <button type="button">Send</button>
+        <ContactBtn type="button">Send</ContactBtn>
+      </Container>
     </section>
   );
 }

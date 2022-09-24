@@ -1,3 +1,10 @@
+import {
+  ImagePeople,
+  Container,
+  TextAbout,
+  TitleAbout,
+  AboutBtn,
+} from './AboutSection.styled';
 export function AboutSection() {
   return (
     <section id="about">
@@ -13,17 +20,19 @@ export function AboutSection() {
     ${require('./images/home/people.jpg')} 1x, 
     ${require('./images/home/people@2x.jpg')} 2x`}
         />
-        <img src={require('./images/home/people.jpg')} alt="People" />
+        <ImagePeople src={require('./images/home/people.jpg')} alt="People" />
       </picture>
-      <p>What you are looking for</p>
-      <h2>We provide bespoke solutions</h2>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
-        ipsum dignissimos quae laudantium asperiores nam aliquid impedit harum
-        illum dolore explicabo ab dolores itaque rerum temporibus doloribus iste
-        maiores deleniti?
-      </p>
-      <button type="button">Read More</button>
+      <Container>
+        <TextAbout>What you are looking for</TextAbout>
+        <TitleAbout>We provide &nbsp; bespoke solutions</TitleAbout>
+        <TextAbout>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
+          ipsum dignissimos quae laudantium asperiores nam aliquid impedit harum
+          illum dolore explicabo ab dolores itaque rerum temporibus doloribus
+          iste maiores deleniti?
+        </TextAbout>
+        <AboutBtn type="button">Read More</AboutBtn>
+      </Container>
     </section>
   );
 }

@@ -53,4 +53,6 @@ export const HeroBtn = styled.button`
   text-align: center;
 
   color: #ffffff;
+  cursor: pointer;
+  border: none;
 `;

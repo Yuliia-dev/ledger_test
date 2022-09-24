@@ -1,13 +1,14 @@
+import { Container, CasesText, CasesTitle, CasesList } from './Cases.styled';
 export function Cases() {
   return (
-    <section id="cases">
-      <p>This is what we do</p>
-      <h2>Business Cases</h2>
-      <p>
+    <Container id="cases">
+      <CasesText>This is what we do</CasesText>
+      <CasesTitle>Business Cases</CasesTitle>
+      <CasesText>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
         sapiente!
-      </p>
-      <ul>
+      </CasesText>
+      <CasesList>
         <li>
           <picture>
             <source
@@ -152,7 +153,7 @@ export function Cases() {
             />
           </picture>
         </li>
-      </ul>
-    </section>
+      </CasesList>
+    </Container>
   );
 }

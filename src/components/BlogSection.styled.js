@@ -2,20 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   margin: 0 auto;
-  padding: 80px 20px;
-  background: #28a745;
+  padding: 48px 20px 58px 20px;
+  background: #0284d0;
 `;
 
-export const ImagePeople = styled.img`
-  /* width: 320px;
-  height: 220px; */
-  background-size: cover;
-  background-position: center;
-  /* background-repeat: no-repeat; */
-  background-color: black;
-`;
-
-export const TextAbout = styled.p`
+export const BlogText = styled.p`
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
@@ -25,7 +16,7 @@ export const TextAbout = styled.p`
   color: #ffffff;
 `;
 
-export const TitleAbout = styled.h2`
+export const BlogTitle = styled.h2`
   margin: 16px 0 24px 0;
   font-family: 'Open Sans';
   font-style: normal;
@@ -36,14 +27,14 @@ export const TitleAbout = styled.h2`
   color: #ffffff;
 `;
 
-export const AboutBtn = styled.button`
+export const BlogBtn = styled.button`
   padding: 15px 30px;
   margin-top: 24px;
 
-  width: 146px;
+  width: 175px;
   height: 54px;
 
-  background: #28a745;
+  background: #0284d0;
   border: 1px solid #ffffff;
   border-radius: 5px;
 
