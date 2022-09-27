@@ -1,6 +1,7 @@
 import {
   Wrapper,
   ImageMen,
+  Form,
   Container,
   ContactTitle,
   ContactInput,
@@ -13,27 +14,29 @@ export function Contact() {
 
       <Container>
         <ContactTitle>Request Callback</ContactTitle>
-        <label>
-          <ContactInput
-            placeholder="Enter your name"
-            type="text"
-            name="user-name"
-            minLength="2"
-            pattern="[a-zA-Zа-яёА-ЯЁ]+"
-            title="Use just letter"
-            required
-          />
-        </label>
-        <label>
-          <ContactInput
-            placeholder="Enter email*"
-            type="email"
-            name="user-email"
-            required
-          />
-        </label>
+        <Form>
+          <label>
+            <ContactInput
+              placeholder="Enter your name"
+              type="text"
+              name="user-name"
+              minLength="2"
+              pattern="[a-zA-Zа-яёА-ЯЁ]+"
+              title="Use just letter"
+              required
+            />
+          </label>
+          <label>
+            <ContactInput
+              placeholder="Enter email*"
+              type="email"
+              name="user-email"
+              required
+            />
+          </label>
 
-        <ContactBtn type="button">Send</ContactBtn>
+          <ContactBtn type="button">Send</ContactBtn>
+        </Form>
       </Container>
     </Wrapper>
   );

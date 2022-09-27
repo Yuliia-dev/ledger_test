@@ -14,6 +14,13 @@ export const FooterList = styled.ul`
   text-align: center;
 `;
 
+export const FooterSvg = styled.svg`
+  fill: #ffffff;
+  :hover {
+    fill: #28a745;
+  }
+`;
+
 export const FooterText = styled.p`
   margin-top: 12px;
   font-family: 'Open Sans';

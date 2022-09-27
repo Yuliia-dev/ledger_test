@@ -4,6 +4,10 @@ import {
   TeamTitle,
   TeamList,
   TeamName,
+  OverlayWrapper,
+  Overlay,
+  Link,
+  ItemLi,
 } from './Team.styled';
 export function Team() {
   return (
@@ -15,24 +19,33 @@ export function Team() {
         sapiente!
       </TeamText>
       <TeamList>
-        <li>
-          <picture>
-            <source
-              srcSet={`
+        <ItemLi>
+          <Link href="./">
+            <OverlayWrapper>
+              <picture>
+                <source
+                  srcSet={`
     ${require('./images/team/person1.webp')} 1x, 
     ${require('./images/team/person1@2x.webp')} 2x`}
-              type="image/webp"
-            />
-            <source
-              srcSet={`
+                  type="image/webp"
+                />
+                <source
+                  srcSet={`
     ${require('./images/team/person1.jpg')} 1x, 
     ${require('./images/team/person1@2x.jpg')} 2x`}
-            />
-            <img src={require('./images/team/person1.jpg')} alt="Men" />
-          </picture>
+                />
+                <img src={require('./images/team/person1.jpg')} alt="Men" />
+              </picture>
+              <Overlay>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas,
+                in, deserunt laudantium facere, aut enim possimus ipsum velit
+                itaque voluptates nisi ipsa beatae dolor cupiditate.
+              </Overlay>
+            </OverlayWrapper>
+          </Link>
           <TeamName>John Doe</TeamName>
           <TeamText lang="en">President</TeamText>
-        </li>
+        </ItemLi>
         <li>
           <picture>
             <source

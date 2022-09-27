@@ -26,6 +26,10 @@ export const ImagePeople = styled.div`
     min-height: 589px;
     background-repeat: no-repeat;
   }
+  @media screen and (min-width: 1360px) {
+    min-width: 670px;
+    min-height: 460px;
+  }
 `;
 
 export const TextAbout = styled.p`
@@ -65,7 +69,7 @@ export const AboutBtn = styled.button`
   width: 146px;
   height: 54px;
 
-  background: #28a745;
+  background: transparent;
   border: 1px solid #ffffff;
   border-radius: 5px;
 
@@ -78,4 +82,9 @@ export const AboutBtn = styled.button`
 
   color: #ffffff;
   cursor: pointer;
+  :hover {
+    background: #f4f4f4;
+    border-radius: 5px;
+    color: #28a745;
+  }
 `;

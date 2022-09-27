@@ -75,3 +75,57 @@ export const TeamName = styled.h3`
     line-height: 32px;
   }
 `;
+
+// OVERLAY
+export const Link = styled.a`
+  /* position: relative; */
+  transition-property: transform, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: block;
+
+  :hover,
+  :focus {
+    transform: translateY(0%);
+    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+`;
+export const ItemLi = styled.li`
+  /* position: relative; */
+  transition-property: transform, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  :hover,
+  :focus {
+    transform: translateY(0%);
+    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+`;
+
+export const OverlayWrapper = styled.div`
+  position: relative;
+  /* overflow: hidden; */
+`;
+
+export const Overlay = styled.p`
+  position: absolute;
+  transition-property: transform, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  :hover,
+  :focus {
+    transform: translateY(0%);
+    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+`;

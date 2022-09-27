@@ -9,7 +9,11 @@ export const HeroSection = styled.section`
   align-items: center;
 
   @media screen and (min-width: 768px) {
-    padding: 300px 120px 378px 120px;
+    padding: 290px 120px 378px 120px;
+  }
+
+  @media screen and (min-width: 1360px) {
+    padding: 162px 280px 270px 280px;
   }
 `;
 
@@ -46,6 +50,9 @@ export const HeroText = styled.p`
     font-size: 40px;
     line-height: 48px;
   }
+  @media screen and (min-width: 1360px) {
+    line-height: 54px;
+  }
 `;
 
 export const HeroBtn = styled.button`
@@ -67,4 +74,7 @@ export const HeroBtn = styled.button`
   color: #ffffff;
   cursor: pointer;
   border: none;
+  :hover {
+    background: #2ebf4f;
+  }
 `;

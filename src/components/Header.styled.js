@@ -7,6 +7,10 @@ export const Container = styled.header`
   @media screen and (min-width: 768px) {
     padding: 25px 32px;
   }
+
+  @media screen and (min-width: 1360px) {
+    padding: 30px 32px;
+  }
 `;
 
 export const Nav = styled.nav`
@@ -31,23 +35,16 @@ export const LogoLink = styled.a`
   cursor: pointer;
 
   @media screen and (min-width: 768px) {
+    font-size: 35px;
+    line-height: 48px;
   }
 `;
 
 export const LogoText = styled.span`
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 38px;
-
   margin: 0 8px 0 8px;
   color: #28a745;
   @media screen and (min-width: 768px) {
     margin: 0 10px 0 10px;
-
-    font-size: 35px;
-    line-height: 48px;
   }
 `;
 export const LinkNav = styled(Link)`

@@ -6,6 +6,14 @@ export const Wrapper = styled.section`
     display: flex;
     margin-bottom: 40px;
   }
+  @media screen and (min-width: 1360px) {
+    margin-bottom: 0;
+  }
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const ImageMen = styled.div`
@@ -21,14 +29,21 @@ export const ImageMen = styled.div`
     min-height: 352px;
     background-repeat: no-repeat;
   }
+  @media screen and (min-width: 1360px) {
+    min-width: 670px;
+    min-height: 454px;
+  }
 `;
 
 export const Container = styled.div`
-  margin: 0 auto;
   padding: 51px 20px 25px 20px;
   background: #f4f4f4;
   @media screen and (min-width: 768px) {
+    width: 100%;
     padding: 32px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 55px 28px 77px 20px;
   }
 `;
 
@@ -55,7 +70,7 @@ export const ContactInput = styled.input`
   font-size: 16px;
   line-height: 23px;
 
-  width: 280px;
+  min-width: 280px;
 
   background: #ffffff;
   border: 1px solid #f5f5f5;
@@ -65,9 +80,12 @@ export const ContactInput = styled.input`
   padding: 16px 8px;
 
   @media screen and (min-width: 768px) {
-    width: 336px;
+    min-width: 336px;
     font-size: 18px;
     line-height: 25px;
+  }
+  @media screen and (min-width: 1360px) {
+    min-width: 642px;
   }
 `;
 
@@ -90,4 +108,7 @@ export const ContactBtn = styled.button`
   color: #ffffff;
   cursor: pointer;
   border: none;
+  :hover {
+    background: #2ebf4f;
+  }
 `;
