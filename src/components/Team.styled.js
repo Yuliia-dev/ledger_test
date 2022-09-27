@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const Container = styled.section`
   margin: 0 auto;
   padding: 72px 20px 50px 20px;
+
+  @media screen and (min-width: 768px) {
+    padding: 50px 32px 40px 32px;
+  }
 `;
 
 export const TeamText = styled.p`
@@ -15,6 +19,11 @@ export const TeamText = styled.p`
   text-align: center;
 
   color: #333333;
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 33px;
+  }
 `;
 
 export const TeamTitle = styled.h2`
@@ -27,12 +36,26 @@ export const TeamTitle = styled.h2`
   text-align: center;
 
   color: #333333;
+
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+    line-height: 54px;
+  }
 `;
 
 export const TeamList = styled.ul`
+  position: relative;
   margin-top: 63px;
+
   display: grid;
+  grid-template-columns: repeat(1, 1fr);
   gap: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 24px;
+    grid-gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 export const TeamName = styled.h3`
@@ -45,4 +68,10 @@ export const TeamName = styled.h3`
   text-align: center;
 
   color: #333333;
+
+  @media screen and (min-width: 768px) {
+    margin: 16px 0 8px 0;
+    font-size: 32px;
+    line-height: 32px;
+  }
 `;

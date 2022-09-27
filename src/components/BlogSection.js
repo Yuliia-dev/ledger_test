@@ -1,25 +1,16 @@
-import { Container, BlogText, BlogTitle, BlogBtn } from './BlogSection.styled';
+import {
+  Wrapper,
+  ImageCoffee,
+  Container,
+  BlogText,
+  BlogTitle,
+  BlogBtn,
+} from './BlogSection.styled';
 
 export function BlogSection() {
   return (
-    <section id="blog">
-      <picture>
-        <source
-          srcSet={`
-    ${require('./images/home/blog.webp')} 1x, 
-    ${require('./images/home/blog@2x.webp')} 2x`}
-          type="image/webp"
-        />
-        <source
-          srcSet={`
-    ${require('./images/home/blog.jpg')} 1x, 
-    ${require('./images/home/blog@2x.jpg')} 2x`}
-        />
-        <img
-          src={require('./images/home/blog.jpg')}
-          alt="Cup of tea and notebooks"
-        />
-      </picture>
+    <Wrapper id="blog">
+      <ImageCoffee></ImageCoffee>
       <Container>
         <BlogText>April 16 2020</BlogText>
         <BlogTitle>Blog Post One</BlogTitle>
@@ -31,6 +22,6 @@ export function BlogSection() {
         </BlogText>
         <BlogBtn type="button">Read Our Blog</BlogBtn>
       </Container>
-    </section>
+    </Wrapper>
   );
 }

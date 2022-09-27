@@ -24,4 +24,9 @@ export const FooterText = styled.p`
   text-align: center;
 
   color: #ffffff;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 25px;
+  }
 `;

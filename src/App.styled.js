@@ -19,9 +19,6 @@ import banner from './components/images/home/showcase.jpg';
 // `;
 
 export const Wrapper = styled.div`
-  margin: 0 auto;
-  padding: 20px;
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,11 +29,4 @@ export const Wrapper = styled.div`
       rgba(0, 0, 0, 0.5)
     ),
     url(${banner});
-
-  /* @media screen and (min-width: 768px) {
-    width: 390px;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 700px;
-  } */
 `;

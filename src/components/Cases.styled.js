@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.section`
   margin: 0 auto;
   padding: 56px 20px 40px 20px;
+  @media screen and (min-width: 768px) {
+    padding: 48px 32px 40px 32px;
+  }
 `;
 
 export const CasesText = styled.p`
@@ -15,6 +18,10 @@ export const CasesText = styled.p`
   text-align: center;
 
   color: #333333;
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 25px;
+  }
 `;
 
 export const CasesTitle = styled.h2`
@@ -28,10 +35,22 @@ export const CasesTitle = styled.h2`
   text-align: center;
 
   color: #333333;
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+    line-height: 54px;
+  }
 `;
 
 export const CasesList = styled.ul`
-  margin-top: 31px;
+  position: relative;
+  margin-top: 30px;
+
   display: grid;
+  grid-template-columns: repeat(1, 1fr);
   gap: 8px;
+
+  @media screen and (min-width: 768px) {
+    grid-gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;

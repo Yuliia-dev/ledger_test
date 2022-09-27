@@ -100,23 +100,6 @@ export function Cases() {
           <picture>
             <source
               srcSet={`
-    ${require('./images/cases/cases6.webp')} 1x, 
-    ${require('./images/cases/cases6@2x.webp')} 2x`}
-              type="image/webp"
-            />
-            <source
-              srcSet={`
-    ${require('./images/cases/cases6.jpg')} 1x, 
-    ${require('./images/cases/cases6@2x.jpg')} 2x
-  `}
-            />
-            <img src={require('./images/cases/cases6.jpg')} alt="People" />
-          </picture>
-        </li>
-        <li>
-          <picture>
-            <source
-              srcSet={`
     ${require('./images/cases/cases7.webp')} 1x, 
     ${require('./images/cases/cases7@2x.webp')} 2x`}
               type="image/webp"
@@ -130,26 +113,6 @@ export function Cases() {
             <img
               src={require('./images/cases/cases7.jpg')}
               alt="Hands together"
-            />
-          </picture>
-        </li>
-        <li>
-          <picture>
-            <source
-              srcSet={`
-    ${require('./images/cases/cases8.webp')} 1x, 
-    ${require('./images/cases/cases8@2x.webp')} 2x`}
-              type="image/webp"
-            />
-            <source
-              srcSet={`
-    ${require('./images/cases/cases8.jpg')} 1x, 
-    ${require('./images/cases/cases8@2x.jpg')} 2x
-  `}
-            />
-            <img
-              src={require('./images/cases/cases8.jpg')}
-              alt="Woman smiling"
             />
           </picture>
         </li>

@@ -1,12 +1,16 @@
 import styled from 'styled-components';
 
 export const HeroSection = styled.section`
-  padding: 62px 0 104px 0;
+  padding: 37px 0 104px 0;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    padding: 300px 120px 378px 120px;
+  }
 `;
 
 export const HeroTitle = styled.h1`
@@ -20,6 +24,11 @@ export const HeroTitle = styled.h1`
   text-align: center;
 
   color: #ffffff;
+
+  @media screen and (min-width: 768px) {
+    font-size: 55px;
+    line-height: 75px;
+  }
 `;
 
 export const HeroText = styled.p`
@@ -33,10 +42,13 @@ export const HeroText = styled.p`
   text-align: center;
 
   color: #ffffff;
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+    line-height: 48px;
+  }
 `;
 
 export const HeroBtn = styled.button`
-  padding: 15px 30px;
   margin-top: 24px;
 
   width: 175px;

@@ -1,4 +1,11 @@
 import styled from 'styled-components';
+import people from './images/home/people.jpg';
+
+export const Wrapper = styled.section`
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+`;
 
 export const Container = styled.div`
   margin: 0 auto;
@@ -6,13 +13,19 @@ export const Container = styled.div`
   background: #28a745;
 `;
 
-export const ImagePeople = styled.img`
-  /* width: 320px;
-  height: 220px; */
+export const ImagePeople = styled.div`
+  min-width: 320px;
+  min-height: 220px;
   background-size: cover;
   background-position: center;
-  /* background-repeat: no-repeat; */
   background-color: black;
+  background-image: url(${people});
+
+  @media screen and (min-width: 768px) {
+    min-width: 368px;
+    min-height: 589px;
+    background-repeat: no-repeat;
+  }
 `;
 
 export const TextAbout = styled.p`
@@ -23,10 +36,15 @@ export const TextAbout = styled.p`
   line-height: 22px;
 
   color: #ffffff;
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 25px;
+  }
 `;
 
 export const TitleAbout = styled.h2`
   margin: 16px 0 24px 0;
+  padding-right: 20px;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
@@ -34,10 +52,14 @@ export const TitleAbout = styled.h2`
   line-height: 44px;
 
   color: #ffffff;
+  @media screen and (min-width: 768px) {
+    padding-right: 100px;
+    font-size: 40px;
+    line-height: 48px;
+  }
 `;
 
 export const AboutBtn = styled.button`
-  padding: 15px 30px;
   margin-top: 24px;
 
   width: 146px;
