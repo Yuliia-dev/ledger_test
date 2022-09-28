@@ -4,6 +4,13 @@ import { Link } from 'react-scroll';
 export const Container = styled.header`
   margin: 0 auto;
   padding: 25px 22px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: ${props => props.color};
+
+  z-index: 20;
+
   @media screen and (min-width: 768px) {
     padding: 25px 32px;
   }
@@ -34,6 +41,11 @@ export const LogoLink = styled.a`
   color: #ffffff;
   cursor: pointer;
 
+  :hover {
+    letter-spacing: 0.03em;
+    transform: scale(1.007);
+  }
+
   @media screen and (min-width: 768px) {
     font-size: 35px;
     line-height: 48px;
@@ -48,6 +60,7 @@ export const LogoText = styled.span`
   }
 `;
 export const LinkNav = styled(Link)`
+  padding: 3px 6px;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
@@ -55,6 +68,12 @@ export const LinkNav = styled(Link)`
   line-height: 22px;
 
   color: #ffffff;
+
+  :hover {
+    padding-bottom: 12px;
+    border-bottom: 3px solid #28a745;
+  }
+
   @media screen and (min-width: 768px) {
     font-size: 18px;
     line-height: 25px;
@@ -62,15 +81,10 @@ export const LinkNav = styled(Link)`
 `;
 
 export const NavList = styled.ul`
+  position: relative;
   margin-top: 16px;
   display: flex;
   @media screen and (min-width: 768px) {
     margin-top: 0;
-  }
-`;
-
-export const NavItem = styled.li`
-  :not(:first-child) {
-    margin-left: 12px;
   }
 `;

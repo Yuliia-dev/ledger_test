@@ -45,7 +45,7 @@ export const CasesTitle = styled.h2`
   }
 `;
 
-export const CasesList = styled.ul`
+export const CasesList = styled.div`
   position: relative;
   margin-top: 30px;
 
@@ -58,3 +58,16 @@ export const CasesList = styled.ul`
     grid-template-columns: repeat(3, 1fr);
   }
 `;
+
+// export const ContainerLightbox = styled.div`
+//   position: fixed;
+//   z-index: 30;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: #040404;
+//   opacity: 0.5;
+//   /* display: none; */
+//   display: ${props => (props.overlay ? 'flex' : 'none')};
+// `;

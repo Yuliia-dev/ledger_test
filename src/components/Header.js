@@ -1,4 +1,4 @@
-// import { Link } from 'react-scroll';
+import { useState } from 'react';
 import {
   Container,
   Nav,
@@ -6,12 +6,23 @@ import {
   LogoLink,
   LogoText,
   NavList,
-  NavItem,
 } from './Header.styled';
 
 export function Header() {
+  const [color, setColor] = useState(false);
+
+  const changeColor = () => {
+    if (window.scrollY >= 95) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeColor);
+
   return (
-    <Container>
+    <Container color={color ? 'rgba(0, 0, 0, 0.8)' : 'rgba(0, 0, 0, 0.0)'}>
       <Nav>
         <div>
           <LogoLink href="./">
@@ -33,7 +44,7 @@ export function Header() {
         </div>
         <div>
           <NavList>
-            <NavItem>
+            <li>
               <LinkNav
                 to="hero"
                 spy={true}
@@ -43,8 +54,8 @@ export function Header() {
               >
                 Home
               </LinkNav>
-            </NavItem>
-            <NavItem>
+            </li>
+            <li>
               <LinkNav
                 to="about"
                 spy={true}
@@ -54,8 +65,8 @@ export function Header() {
               >
                 About
               </LinkNav>
-            </NavItem>
-            <NavItem>
+            </li>
+            <li>
               <LinkNav
                 to="cases"
                 spy={true}
@@ -65,8 +76,8 @@ export function Header() {
               >
                 Cases
               </LinkNav>
-            </NavItem>
-            <NavItem>
+            </li>
+            <li>
               <LinkNav
                 to="blog"
                 spy={true}
@@ -76,8 +87,8 @@ export function Header() {
               >
                 Blog
               </LinkNav>
-            </NavItem>
-            <NavItem>
+            </li>
+            <li>
               <LinkNav
                 to="contact"
                 spy={true}
@@ -87,7 +98,7 @@ export function Header() {
               >
                 Contact
               </LinkNav>
-            </NavItem>
+            </li>
           </NavList>
         </div>
       </Nav>

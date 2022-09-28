@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeroSection = styled.section`
-  padding: 37px 0 104px 0;
+  padding: 160px 0 104px 0;
 
   display: flex;
   flex-direction: column;
