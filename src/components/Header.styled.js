@@ -23,8 +23,8 @@ export const Container = styled.header`
 export const Nav = styled.nav`
   @media screen and (min-width: 768px) {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-evenly; */
     align-items: center;
   }
 `;
@@ -85,6 +85,9 @@ export const NavList = styled.ul`
   margin-top: 16px;
   display: flex;
   @media screen and (min-width: 768px) {
-    margin-top: 0;
+    margin-left: 100px;
+  }
+  @media screen and (min-width: 1360px) {
+    margin-left: 550px;
   }
 `;
