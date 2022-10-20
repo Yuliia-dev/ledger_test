@@ -8,7 +8,6 @@ export const Wrapper = styled.section`
 `;
 
 export const Container = styled.div`
-  margin: 0 auto;
   padding: 80px 20px;
   background: #28a745;
 `;

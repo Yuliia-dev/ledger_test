@@ -77,54 +77,54 @@ export const TeamName = styled.h3`
 `;
 
 // OVERLAY
-export const Link = styled.a`
-  /* position: relative; */
-  transition-property: transform, box-shadow;
+
+export const TeamDiv = styled.div`
+  transition-property: transform, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:hover .client-overlay {
+    transform: translateY(0%);
+    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+`;
+
+export const TeamLink = styled.a`
+  transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   display: block;
 
-  :hover,
-  :focus {
+  &:hover,
+  &:focus {
     transform: translateY(0%);
     box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 `;
-export const ItemLi = styled.li`
-  /* position: relative; */
-  transition-property: transform, transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  :hover,
-  :focus {
-    transform: translateY(0%);
-    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-`;
-
-export const OverlayWrapper = styled.div`
+export const TeamWrapOverlay = styled.div`
   position: relative;
   /* overflow: hidden; */
 `;
 
-export const Overlay = styled.p`
-  position: absolute;
+export const TeamOverlay = styled.p`
   transition-property: transform, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(100%);
 
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
   background-color: rgba(33, 150, 243, 0.9);
+  color: #657866;
 
-  :hover,
-  :focus {
+  &:hover,
+  &:focus {
     transform: translateY(0%);
     box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
   }

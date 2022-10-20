@@ -22,10 +22,9 @@ export const Container = styled.header`
 
 export const Nav = styled.nav`
   @media screen and (min-width: 768px) {
+    margin-right: 40px;
     display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-evenly; */
-    align-items: center;
+    justify-content: space-between;
   }
 `;
 

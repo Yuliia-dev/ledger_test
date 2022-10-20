@@ -4,10 +4,14 @@ import {
   TeamTitle,
   TeamList,
   TeamName,
-  OverlayWrapper,
-  Overlay,
-  Link,
-  ItemLi,
+  TeamDiv,
+  TeamLink,
+  TeamWrapOverlay,
+  TeamOverlay,
+  // OverlayWrapper,
+  // Overlay,
+  // Link,
+  // ItemPic,
 } from './Team.styled';
 export function Team() {
   return (
@@ -19,33 +23,35 @@ export function Team() {
         sapiente!
       </TeamText>
       <TeamList>
-        <ItemLi>
-          <Link href="./">
-            <OverlayWrapper>
-              <picture>
-                <source
-                  srcSet={`
+        <li>
+          <TeamDiv>
+            <TeamLink href="./">
+              <TeamWrapOverlay>
+                <picture>
+                  <source
+                    srcSet={`
     ${require('./images/team/person1.webp')} 1x, 
     ${require('./images/team/person1@2x.webp')} 2x`}
-                  type="image/webp"
-                />
-                <source
-                  srcSet={`
+                    type="image/webp"
+                  />
+                  <source
+                    srcSet={`
     ${require('./images/team/person1.jpg')} 1x, 
     ${require('./images/team/person1@2x.jpg')} 2x`}
-                />
-                <img src={require('./images/team/person1.jpg')} alt="Men" />
-              </picture>
-              <Overlay>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas,
-                in, deserunt laudantium facere, aut enim possimus ipsum velit
-                itaque voluptates nisi ipsa beatae dolor cupiditate.
-              </Overlay>
-            </OverlayWrapper>
-          </Link>
+                  />
+                  <img src={require('./images/team/person1.jpg')} alt="Men" />
+                </picture>
+                <TeamOverlay>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Quas, in, deserunt laudantium facere, aut enim possimus ipsum
+                  velit itaque voluptates nisi ipsa beatae dolor cupiditate.
+                </TeamOverlay>
+              </TeamWrapOverlay>
+            </TeamLink>
+          </TeamDiv>
           <TeamName>John Doe</TeamName>
           <TeamText lang="en">President</TeamText>
-        </ItemLi>
+        </li>
         <li>
           <picture>
             <source

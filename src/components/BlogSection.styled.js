@@ -9,7 +9,6 @@ export const Wrapper = styled.section`
 `;
 
 export const Container = styled.div`
-  margin: 0 auto;
   padding: 48px 20px 58px 20px;
   background: #0284d0;
   @media screen and (min-width: 768px) {
