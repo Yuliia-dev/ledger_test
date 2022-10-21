@@ -25,7 +25,7 @@ export function Team() {
       <TeamList>
         <TeamItem>
           <TeamLink href="./">
-            <div>
+            <TeamWrapOverlay>
               <picture>
                 <source
                   srcSet={`
@@ -45,7 +45,7 @@ export function Team() {
                 in, deserunt laudantium facere, aut enim possimus ipsum velit
                 itaque voluptates nisi ipsa beatae dolor cupiditate.
               </TeamOverlay>
-            </div>
+            </TeamWrapOverlay>
             <TeamName>John Doe</TeamName>
             <TeamText lang="en">President</TeamText>
           </TeamLink>

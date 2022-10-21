@@ -79,8 +79,6 @@ export const TeamName = styled.h3`
 // OVERLAY
 
 export const TeamItem = styled.li`
-  position: relative;
-  /* overflow: hidden; */
   transition-property: transform, transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -105,10 +103,10 @@ export const TeamLink = styled.a`
     box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 `;
-// export const TeamWrapOverlay = styled.div`
-//   position: relative;
-//   overflow: hidden;
-// `;
+export const TeamWrapOverlay = styled.div`
+  position: relative;
+  overflow: hidden;
+`;
 
 export const TeamOverlay = styled.p`
   transition-property: transform, box-shadow;
