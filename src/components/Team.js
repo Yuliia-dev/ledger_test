@@ -4,7 +4,7 @@ import {
   TeamTitle,
   TeamList,
   TeamName,
-  TeamDiv,
+  TeamItem,
   TeamLink,
   TeamWrapOverlay,
   TeamOverlay,
@@ -23,35 +23,33 @@ export function Team() {
         sapiente!
       </TeamText>
       <TeamList>
-        <li>
-          <TeamDiv>
-            <TeamLink href="./">
-              <TeamWrapOverlay>
-                <picture>
-                  <source
-                    srcSet={`
+        <TeamItem>
+          <TeamLink href="./">
+            <div>
+              <picture>
+                <source
+                  srcSet={`
     ${require('./images/team/person1.webp')} 1x, 
     ${require('./images/team/person1@2x.webp')} 2x`}
-                    type="image/webp"
-                  />
-                  <source
-                    srcSet={`
+                  type="image/webp"
+                />
+                <source
+                  srcSet={`
     ${require('./images/team/person1.jpg')} 1x, 
     ${require('./images/team/person1@2x.jpg')} 2x`}
-                  />
-                  <img src={require('./images/team/person1.jpg')} alt="Men" />
-                </picture>
-                <TeamOverlay>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Quas, in, deserunt laudantium facere, aut enim possimus ipsum
-                  velit itaque voluptates nisi ipsa beatae dolor cupiditate.
-                </TeamOverlay>
-              </TeamWrapOverlay>
-            </TeamLink>
-          </TeamDiv>
-          <TeamName>John Doe</TeamName>
-          <TeamText lang="en">President</TeamText>
-        </li>
+                />
+                <img src={require('./images/team/person1.jpg')} alt="Men" />
+              </picture>
+              <TeamOverlay>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas,
+                in, deserunt laudantium facere, aut enim possimus ipsum velit
+                itaque voluptates nisi ipsa beatae dolor cupiditate.
+              </TeamOverlay>
+            </div>
+            <TeamName>John Doe</TeamName>
+            <TeamText lang="en">President</TeamText>
+          </TeamLink>
+        </TeamItem>
         <li>
           <picture>
             <source
