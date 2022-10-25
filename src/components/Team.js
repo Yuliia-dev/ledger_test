@@ -50,7 +50,7 @@ export function Team() {
             <TeamText lang="en">President</TeamText>
           </TeamLink>
         </TeamItem>
-        <li>
+        <TeamItem>
           <picture>
             <source
               srcSet={`
@@ -68,8 +68,8 @@ export function Team() {
           </picture>
           <TeamName>Jane Doe</TeamName>
           <TeamText lang="en">Vice President</TeamText>
-        </li>
-        <li>
+        </TeamItem>
+        <TeamItem>
           <picture>
             <source
               srcSet={`
@@ -87,7 +87,7 @@ export function Team() {
           </picture>
           <TeamName>Steve Smith</TeamName>
           <TeamText lang="en">Marketing Head</TeamText>
-        </li>
+        </TeamItem>
       </TeamList>
     </Container>
   );

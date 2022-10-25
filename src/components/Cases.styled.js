@@ -45,7 +45,7 @@ export const CasesTitle = styled.h2`
   }
 `;
 
-export const CasesList = styled.div`
+export const CasesList = styled.ul`
   position: relative;
   margin-top: 30px;
 
@@ -56,6 +56,19 @@ export const CasesList = styled.div`
   @media screen and (min-width: 768px) {
     grid-gap: 18px;
     grid-template-columns: repeat(3, 1fr);
+  }
+`;
+
+export const CasesItem = styled.li`
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  &:hover,
+  &:focus {
+    opacity: 0.7;
   }
 `;
 
