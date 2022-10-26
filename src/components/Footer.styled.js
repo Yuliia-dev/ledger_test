@@ -36,4 +36,9 @@ export const FooterText = styled.p`
     font-size: 18px;
     line-height: 25px;
   }
+
+  &:hover,
+  &:focus {
+    color: lightgray;
+  }
 `;

@@ -1,47 +1,12 @@
-// import { useState } from 'react';
-// import { SRLWrapper } from 'simple-react-lightbox';
 import {
   Container,
   CasesText,
   CasesTitle,
   CasesList,
   CasesItem,
-  // ContainerLightbox,
 } from './Cases.styled';
-// import lightbox from 'lightbox2';
-// import lightbox from '/node_modules/lightbox2/dist/css/lightbox.min.css';
-
-// import lightbox2 from 'lightbox2';
-
-// lightbox.option({
-//   // resizeDuration: 200,
-//   wrapAround: true,
-//   alwaysShowNavOnTouchDevices: true,
-//   disableScrolling: true,
-//   maxWidth: 900,
-//   maxHeight: 603,
-//   fitImagesInViewport: true,
-
-//   positionFromTop: 0,
-// });
-
-// lightbox.option({
-//   'resizeDuration': 200,
-//   'wrapAround': true
-// })
 
 export function Cases() {
-  // const [overlay, setOverlay] = useState(false);
-
-  // const changeOverlay = e => {
-  //   if (e.target !== e.currentTarget) {
-  //     setOverlay(true);
-  //   }
-  //   if (e.code === 'Escape' || e.currentTarget === e.target) {
-  //     setOverlay(false);
-  //   }
-  // // };
-
   return (
     <Container id="cases">
       <CasesText>This is what we do</CasesText>
@@ -53,8 +18,6 @@ export function Cases() {
 
       <CasesList>
         <CasesItem>
-          {/* <SRLWrapper> */}
-
           <picture>
             <source
               srcSet={`
@@ -163,9 +126,7 @@ export function Cases() {
             />
           </picture>
         </CasesItem>
-        {/* </SRLWrapper> */}
       </CasesList>
-      {/* <ContainerLightbox overlay={overlay}></ContainerLightbox> */}
     </Container>
   );
 }

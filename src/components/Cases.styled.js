@@ -71,16 +71,3 @@ export const CasesItem = styled.li`
     opacity: 0.7;
   }
 `;
-
-// export const ContainerLightbox = styled.div`
-//   position: fixed;
-//   z-index: 30;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background: #040404;
-//   opacity: 0.5;
-//   /* display: none; */
-//   display: ${props => (props.overlay ? 'flex' : 'none')};
-// `;
