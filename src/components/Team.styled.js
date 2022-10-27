@@ -80,12 +80,14 @@ export const TeamLinkList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 25px;
+  height: 100%;
+  gap: 15px;
   text-align: center;
 `;
 
 export const TeamSvg = styled.svg`
   fill: #ffffff;
+  opacity: 1;
   :hover {
     fill: #28a745;
   }
@@ -110,7 +112,8 @@ export const TeamOverlayContainer = styled.div`
   text-align: center;
 
   &:hover {
-    opacity: 1;
+    background: #040404;
+    opacity: 0.7;
   }
 `;
 
@@ -122,6 +125,6 @@ export const Image = styled.picture`
   backface-visibility: hidden;
 
   &:hover {
-    opacity: 0.3;
+    opacity: 0.5;
   }
 `;
