@@ -76,54 +76,52 @@ export const TeamName = styled.h3`
   }
 `;
 
+export const TeamLinkList = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  text-align: center;
+`;
+
+export const TeamSvg = styled.svg`
+  fill: #ffffff;
+  :hover {
+    fill: #28a745;
+  }
+`;
+
 // OVERLAY
 
-export const TeamItem = styled.li`
-  transition-property: transform, transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    transform: translateY(0%);
-    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-`;
-
-export const TeamLink = styled.a`
-  transition-property: transform, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  display: block;
-
-  &:hover,
-  &:focus {
-    transform: translateY(0%);
-    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-`;
-export const TeamWrapOverlay = styled.div`
+export const TeamWrapOverly = styled.div`
   position: relative;
-  overflow: hidden;
 `;
 
-export const TeamOverlay = styled.p`
-  transition-property: transform, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateY(100%);
-
+export const TeamOverlayContainer = styled.div`
+  transition: 0.5s ease;
+  opacity: 0;
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 
-  &:hover,
-  &:focus {
-    transform: translateY(0%);
-    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+  &:hover {
+    opacity: 1;
+  }
+`;
+
+export const Image = styled.picture`
+  opacity: 1;
+  display: block;
+
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+
+  &:hover {
+    opacity: 0.3;
   }
 `;
