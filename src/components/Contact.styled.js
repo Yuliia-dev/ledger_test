@@ -63,7 +63,16 @@ export const ContactTitle = styled.h2`
   }
 `;
 
+export const ContactLabel = styled.label`
+  position: absolute;
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1360px) {
+  }
+`;
+
 export const ContactInput = styled.input`
+  position: relative;
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;

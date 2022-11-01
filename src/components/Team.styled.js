@@ -81,7 +81,7 @@ export const TeamLinkList = styled.ul`
   align-items: center;
   justify-content: center;
   height: 100%;
-  gap: 15px;
+  gap: 25px;
   text-align: center;
 `;
 

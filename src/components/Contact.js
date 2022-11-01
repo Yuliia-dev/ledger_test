@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Wrapper,
   ImageMen,
@@ -5,9 +6,13 @@ import {
   Container,
   ContactTitle,
   ContactInput,
+  ContactLabel,
   ContactBtn,
 } from './Contact.styled';
 export function Contact() {
+  // const [email, setEmail] = useState('');
+  // const [name, setName] = useState('');
+
   return (
     <Wrapper id="contact">
       <ImageMen></ImageMen>
@@ -15,24 +20,26 @@ export function Contact() {
       <Container>
         <ContactTitle>Request Callback</ContactTitle>
         <Form>
+          <ContactInput
+            // value={name}
+            // placeholder="Enter your name"
+            type="text"
+            name="name"
+            minLength="2"
+            pattern="[a-zA-Zа-яёА-ЯЁ]+"
+            title="Use just letter"
+            required
+          />
+          <ContactLabel for="name">Enter your name</ContactLabel>
           <label>
             <ContactInput
-              placeholder="Enter your name"
-              type="text"
-              name="user-name"
-              minLength="2"
-              pattern="[a-zA-Zа-яёА-ЯЁ]+"
-              title="Use just letter"
-              required
-            />
-          </label>
-          <label>
-            <ContactInput
-              placeholder="Enter email*"
+              // value={email}
+              // placeholder="Enter email*"
               type="email"
               name="user-email"
               required
             />
+            <span>Enter email*</span>
           </label>
 
           <ContactBtn type="button">Send</ContactBtn>

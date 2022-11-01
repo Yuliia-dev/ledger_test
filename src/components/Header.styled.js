@@ -39,10 +39,13 @@ export const LogoLink = styled.a`
   line-height: 38px;
   color: #ffffff;
   cursor: pointer;
+  transform: scale(1);
+  transition: 0.5s ease;
 
   :hover {
     letter-spacing: 0.03em;
     transform: scale(1.007);
+    transition: 0.5s ease;
   }
 
   @media screen and (min-width: 768px) {
@@ -70,7 +73,7 @@ export const LinkNav = styled(Link)`
 
   :hover {
     padding-bottom: 12px;
-    border-bottom: 3px solid #28a745;
+    border-bottom: 2px solid #28a745;
   }
 
   @media screen and (min-width: 768px) {
