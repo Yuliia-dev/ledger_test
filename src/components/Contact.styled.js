@@ -11,7 +11,7 @@ export const Wrapper = styled.section`
   }
 `;
 
-export const Form = styled.form`
+export const FormE = styled.form`
   display: flex;
   flex-direction: column;
 `;
@@ -64,7 +64,11 @@ export const ContactTitle = styled.h2`
 `;
 
 export const ContactLabel = styled.label`
-  position: absolute;
+  /* position: absolute; */
+  /* padding: 5px; */
+  /* top: 5px;
+  left: 5px; */
+  /* background: transparent; */
   @media screen and (min-width: 768px) {
   }
   @media screen and (min-width: 1360px) {
