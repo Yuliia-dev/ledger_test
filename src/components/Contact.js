@@ -14,7 +14,7 @@ import {
 export function Contact() {
   // const [email, setEmail] = useState('');
   // const [name, setName] = useState('');
-  const initialValue = {
+  let initialValue = {
     name: '',
     email: '',
   };
@@ -23,8 +23,9 @@ export function Contact() {
     email: Yup.string().email('Invalid email format').required('Required'),
   });
 
-  const onSubmit = value => {
-    console.log('Form data', value);
+  const onSubmit = event => {
+    event.preventDefault();
+    console.log('Form data', event);
   };
 
   return (
@@ -41,33 +42,31 @@ export function Contact() {
         >
           {
             ({
-              // values,
+              values,
               // errors,
               // touched,
-              // handleChange,
+              handleChange,
               // handleBlur,
-              handleSubmit,
-              isSubmitting,
+              // handleSubmit,
+              // isSubmitting,
             }) => (
               <form onSubmit={onSubmit}>
                 <input
                   type="text"
                   name="name"
-                  // onChange={handleChange}
+                  onChange={handleChange}
                   // onBlur={handleBlur}
                 />
                 {/* {errors.email && touched.email && errors.email} */}
                 <input
                   type="email"
                   name="email"
-                  // onChange={handleChange}
+                  onChange={handleChange}
                   // onBlur={handleBlur}
-                  // value={values.password}
+                  // value={values.email}
                 />
                 {/* {errors.password && touched.password && errors.password} */}
-                <button type="submit" disabled={isSubmitting}>
-                  Submit
-                </button>
+                <button type="submit">Submit</button>
               </form>
             )
             /* {formik => {
