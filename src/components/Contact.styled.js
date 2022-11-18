@@ -11,7 +11,7 @@ export const Wrapper = styled.section`
   }
 `;
 
-export const FormE = styled.form`
+export const FormForContact = styled.form`
   display: flex;
   flex-direction: column;
 `;
@@ -64,15 +64,11 @@ export const ContactTitle = styled.h2`
 `;
 
 export const ContactLabel = styled.label`
-  /* position: absolute; */
-  /* padding: 5px; */
-  /* top: 5px;
-  left: 5px; */
-  /* background: transparent; */
-  @media screen and (min-width: 768px) {
-  }
-  @media screen and (min-width: 1360px) {
-  }
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
 `;
 
 export const ContactInput = styled.input`

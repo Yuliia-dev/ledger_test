@@ -1,33 +1,32 @@
 // import { useState } from 'react';
-import { Formik } from 'formik';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import {
   Wrapper,
   ImageMen,
-  // FormE,
+  FormForContact,
   Container,
   ContactTitle,
-  // ContactInput,
-  // ContactLabel,
-  // ContactBtn,
+  ContactInput,
+  ContactLabel,
+  ContactBtn,
 } from './Contact.styled';
 export function Contact() {
-  // const [email, setEmail] = useState('');
-  // const [name, setName] = useState('');
-  let initialValue = {
-    name: '',
-    email: '',
-  };
-  const validation = Yup.object({
-    name: Yup.string(),
-    email: Yup.string().email('Invalid email format').required('Required'),
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+    },
+    validationSchema: Yup.object({
+      name: Yup.string()
+        .max(15, 'Must be 15 characters or less')
+        .required('Required'),
+      email: Yup.string().email('Invalid email address').required('Required'),
+    }),
+    onSubmit: (values, { resetForm }) => {
+      resetForm();
+    },
   });
-
-  const onSubmit = event => {
-    event.preventDefault();
-    console.log('Form data', event);
-  };
-
   return (
     <Wrapper id="contact">
       <ImageMen></ImageMen>
@@ -35,80 +34,32 @@ export function Contact() {
       <Container>
         <ContactTitle>Request Callback</ContactTitle>
 
-        <Formik
-          initialValues={initialValue}
-          validationSchema={validation}
-          onSubmit={onSubmit}
+        <FormForContact
+          onSubmit={e => {
+            e.preventDefault();
+            formik.handleSubmit(e);
+            alert('Form is send');
+          }}
         >
-          {
-            ({
-              values,
-              // errors,
-              // touched,
-              handleChange,
-              // handleBlur,
-              // handleSubmit,
-              // isSubmitting,
-            }) => (
-              <form onSubmit={onSubmit}>
-                <input
-                  type="text"
-                  name="name"
-                  onChange={handleChange}
-                  // onBlur={handleBlur}
-                />
-                {/* {errors.email && touched.email && errors.email} */}
-                <input
-                  type="email"
-                  name="email"
-                  onChange={handleChange}
-                  // onBlur={handleBlur}
-                  // value={values.email}
-                />
-                {/* {errors.password && touched.password && errors.password} */}
-                <button type="submit">Submit</button>
-              </form>
-            )
-            /* {formik => {
-            return (
-              <Form>
-                <input type="text" name="name" />
-                <input type="email" name="email" />
-                <button type="submit" disabled={!formik.isValid}>
-                  Submit
-                </button>
-              </Form>
-            );
-          }} */
-          }
-        </Formik>
-        {/* <FormE>
-          <ContactLabel for="name">
-            Enter your name
-            <ContactInput
-              value={name}
-              placeholder="Enter your name"
-              type="text"
-              name="name"
-              minLength="2"
-              pattern="[a-zA-Zа-яёА-ЯЁ]+"
-              title="Use just letter"
-              required
-            />
-          </ContactLabel>
-          <label>
-            <ContactInput
-              value={email}
-              placeholder="Enter email*"
-              type="email"
-              name="user-email"
-              required
-            />
-            <span>Enter email*</span>
-          </label>
+          <ContactLabel htmlFor="name">Name</ContactLabel>
+          <ContactInput
+            id="name"
+            name="name"
+            type="text"
+            onChange={formik.handleChange}
+            value={formik.values.name}
+          />
 
-          <ContactBtn type="button">Send</ContactBtn>
-        </FormE> */}
+          <ContactLabel htmlFor="email">Email </ContactLabel>
+          <ContactInput
+            id="email"
+            name="email"
+            type="email"
+            onChange={formik.handleChange}
+            value={formik.values.email}
+          />
+          <ContactBtn type="submit">Submit</ContactBtn>
+        </FormForContact>
       </Container>
     </Wrapper>
   );
